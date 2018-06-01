@@ -1,3 +1,10 @@
+body {
+    padding-bottom: 40px;
+    background-image: url("../img/sea.jpg");
+    background-size: cover;
+    background-color: #cccccc;
+}
+
 #mainMenu {
     margin-bottom: 70px;
 }
