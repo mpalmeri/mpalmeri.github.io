@@ -1,0 +1,60 @@
+* {
+    font-family: 'Raleway', Arial, Helvetica, sans-serif;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+}
+
+header,
+footer {
+    border: 1px blue solid;
+    text-align: center;
+    height: 100px;
+    color: navy;
+    font-size: 2em;
+}
+
+#content {
+    border: 2px dotted green;
+    background-color: beige;
+}
+
+#sideMenu {
+    width: 30%;
+}
+
+#Main {
+    /* display: inline; */
+    width: 70%;
+    font-family: 'Raleway', sans-serif;
+}
+
+.withborder {
+    border: 1px solid grey;
+}
+
+.titolo {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+}
+
+h1.titolo {
+    font-size: 34;
+    text-decoration: underline;
+}
+
+#spesa>.item>img {
+    width: 100%;
+    height: auto;
+}
+
+#spesa img {
+    width: 100%;
+    height: auto;
+}
