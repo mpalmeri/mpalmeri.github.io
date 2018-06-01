@@ -1,39 +1,39 @@
 * {
-    font-family: 'Raleway', Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }
 
 img {
     width: 100%;
+    max-width: 600px;
     height: auto;
-    max-width: 400px;
 }
 
+
+/*
 header,
 footer {
-    border: 1px blue solid;
+    border: 1px black solid;
     text-align: center;
     height: 100px;
-    color: navy;
     font-size: 2em;
 }
 
 #content {
     border: 2px dotted green;
-    background-color: beige;
 }
 
 #sideMenu {
     width: 30%;
+    font-size: 2em;
 }
 
-#Main {
-    /* display: inline; */
+#main {
+  
     width: 70%;
-    font-family: 'Raleway', sans-serif;
 }
 
-.withborder {
-    border: 1px solid grey;
+.withBorder {
+    border: 1px solid gray;
 }
 
 .titolo {
@@ -41,20 +41,20 @@ footer {
     font-weight: bold;
     text-align: center;
     text-transform: uppercase;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 h1.titolo {
-    font-size: 34;
+    font-size: 28px;
     text-decoration: underline;
 }
 
 #spesa>.item>img {
-    width: 100%;
+    width: 300px;
     height: auto;
 }
 
 #spesa img {
-    width: 100%;
+    width: 500px;
     height: auto;
-}
+}*/

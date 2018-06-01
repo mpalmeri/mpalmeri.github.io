@@ -1,9 +1,69 @@
 * {
-    font-family: 'Raleway', Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    padding: 20px;
 }
 
 img {
     width: 100%;
     max-width: 900px;
     height: auto;
+}
+
+ul,
+li {
+    padding: 0;
+}
+
+
+/* MENU  */
+
+header {
+    margin-bottom: 40px;
+}
+
+nav li {
+    display: inline-block;
+    width: 50%;
+    padding: 10px;
+    border: 1px solid gray;
+}
+
+
+/* FORM  */
+
+form {
+    border: 1px solid gray;
+    padding: 30px 20px;
+}
+
+.formItem {
+    margin-bottom: 20px;
+}
+
+.formItem label {
+    width: 20%;
+    display: inline-block;
+    font-weight: 700;
+}
+
+.formItem input,
+.formItem select {
+    width: 70%;
+    padding: 5px;
+}
+
+.box {
+    border: 2px solid red;
+    border-color: green red;
+    display: inline-block;
+    width: 30%;
+    padding: 10px 20px 5px;
+    margin: 5px auto;
 }
