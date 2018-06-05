@@ -16,3 +16,16 @@ body {
 .card {
     background-color: #ffffff2e;
 }
+
+.box {
+    border: 1px solid gray;
+    padding: 20px;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.orange {
+    background-color: orange;
+}
