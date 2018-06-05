@@ -12,3 +12,7 @@ body {
 #mainMenu .active .nav-link {
     cursor: default;
 }
+
+.card {
+    background-color: #ffffff2e;
+}
