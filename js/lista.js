@@ -1,7 +1,7 @@
 console.log("PAGINA LISTA");
 var SERVICE_URL = "https://jsonplaceholder.typicode.com";
 var API_KEY = "AIzaSyB45NWxEaUGKcaEo7uDK6ebtltITN8bg7Q";
-var YOUTUBE_URL = "https://www.googleapis.com/youtube/v3/search"
+var YOUTUBE_URL = "https://www.googleapis.com/youtube/v3/search?part=snippet&key=" + API_KEY + "&q=";
 
 
 jQuery(document).ready(function($) {
@@ -9,12 +9,14 @@ jQuery(document).ready(function($) {
         // Jquery == $
         console.log("READY")
             //console.log("arguments", arguments)
-        ç //$("#loadingBar").hide(); //nascondo barra caricamento
-        //$("#usersTable").hide(); 
+            //$("#loadingBar").hide(); //nascondo barra caricamento
+            //$("#usersTable").hide(); 
 
         $("#searchBtn").click(function() {
             console.log("Click");
-            getUsers();
+            //getUsers();
+            var search = $("#searchInput").val();
+            getVideos(search);
         })
 
         //.click() così clicca da solo 
@@ -27,23 +29,35 @@ jQuery(document).ready(function($) {
             $.getJSON(SERVICE_URL + "/users", function(response) {
                 var users = response;
                 console.log("USERS", users);
-                fillTable(users);
+                //fillTable();
+            })
+        }
+
+        function getVideos(search) {
+            $("#loadingBar").fadeIn();
+            $("#emptyContent").fadeOut();
+
+            console.log("chiamo get video");
+            $.getJSON(YOUTUBE_URL + search, function(response) {
+                var videos = response.items;
+                console.log("VIDEOS", videos);
+                fillTable(videos);
             })
         }
 
         function fillTable(arrayData) {
             var $tableBody = $("#usersTable tbody")
             $tableBody.html("");
-            $.each(arrayData, function(index, user) {
-                console.log(index, user)
+            $.each(arrayData, function(index, video) {
+                console.log(index, video)
 
                 //creo una riga vuota
                 var newRow = jQuery("<tr></tr>");
                 //inserisco dentro la riga vuota un tag td con il valore che voglio <td>VALORE</>
-                newRow.append("<td>" + user.id + "</td>") //id  
-                newRow.append("<td>" + user.name + "</td>") //name
-                newRow.append("<td>" + user.email + "</td>") //email
-                newRow.append("<td>" + user.username + "</td>") //username
+                newRow.append("<td>" + video.id.videoId + "</td>") //id  
+                newRow.append("<td><a href='https://www.youtube.com/watch?v=" + video.id.videoId + "'>vai</a>" + video.snippet.title + "</td>") //name
+                newRow.append("<td><img src='" + video.snippet.thumbnails.default.url + "'/></td>") //email
+
 
                 //append la riga alla tabella
 
