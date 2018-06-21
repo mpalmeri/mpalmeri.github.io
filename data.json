@@ -1,4 +1,4 @@
-{
+[{
     "name": "Pippo",
     "age": 37,
     "children": [{
@@ -15,4 +15,4 @@
         "name": "Bilbo",
         "age": 28
     }
-}
+}]
